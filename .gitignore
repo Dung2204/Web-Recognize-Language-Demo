@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Môi trường ảo
+venv/
+.env
+
+# Logs
+*.log
+logs/
+
+# Thư mục khác
+instance/
+*.sqlite3

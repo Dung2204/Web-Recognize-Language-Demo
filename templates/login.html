@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập | Recognize Flower</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Csslogin.css') }}">
+    <script src="{{ url_for('static', filename='js/Jslogin.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Recognize Flower</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a class="nav-button" href="{{ url_for('home') }}">Home</a></li>
+                    <li><a class="nav-button" href="{{ url_for('language_detection') }}">Recognize</a></li>
+                    <li><a class="nav-button" href="{{ url_for('contact') }}">Contact</a></li>
+                    <!-- <li><a class="nav-button" href="{{ url_for('login') }}">Login</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="login">
+            <div class="container">
+                <h2>Đăng Nhập</h2>
+                <form id="loginForm" method="POST">
+                    <input type="text" id="username" name="username" placeholder="Tên người dùng" required>
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                    <button type="submit">Đăng Nhập</button>
+                </form>
+                <a href="#" id="createAccountLink">Tạo Tài Khoản</a> | 
+                <a href="#" id="forgotPasswordLink">Quên Mật Khẩu</a>
+            </div>
+        </section>
+
+        <section id="createAccount" style="display: none;" class="form-section">
+            <div class="container">
+                <h2>Tạo Tài Khoản</h2>
+                <form id="createAccountForm">
+                    <input type="text" id="newUsername" name="newUsername" placeholder="Tên người dùng" required>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="Mật khẩu" required>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+                    <button type="submit">Tạo Tài Khoản</button>
+                </form>
+                <a href="#" id="backToLoginCreate">Quay lại Đăng Nhập</a>
+            </div>
+        </section>
+        
+        <section id="forgotPassword" style="display: none;" class="form-section">
+            <div class="container">
+                <h2>Quên Mật Khẩu</h2>
+                <form id="forgotPasswordForm">
+                    <input type="text" id="recoverUsername" name="recoverUsername" placeholder="Tên người dùng" required>
+                    <input type="email" id="recoverEmail" name="recoverEmail" placeholder="Email" required>
+                    <button type="submit">Khôi Phục Mật Khẩu</button>
+                </form>
+                <a href="#" id="backToLoginForgot">Quay lại Đăng Nhập</a>
+            </div>
+        </section>
+
+        <section id="userDetails" style="display: none;">
+            <div class="container">
+                <h2>Chi tiết người dùng</h2>
+                <div class="user-info">
+                    <h3>Chào mừng, <span id="userFullName"></span>!</h3>
+                    <p>Ngày sinh: <span id="userDOB"></span></p>
+                    <p>Email: <span id="userEmail"></span></p>
+                    <p>Điện thoại: <span id="userPhone"></span></p>
+                </div>
+                <div id="loginHistory">
+                    <h3>Lịch sử đăng nhập</h3>
+                    <ul id="loginHistoryList"></ul>
+                </div>
+                <div id="actions">
+                    <button id="editDetailsBtn">Chỉnh sửa Chi tiết</button>
+                    <button id="verifyIdentityBtn">Xác minh Danh tính</button>
+                    <button id="lockAccountBtn">Khóa Tài Khoản</button>
+                    <button id="deleteAccountBtn">Xóa Tài Khoản</button>
+                    <button id="logoutBtn">Đăng Xuất</button>
+                </div>
+                <div id="adminSection" style="display: none;">
+                    <h3>Phần Quản Trị: Tài Khoản Người Dùng</h3>
+                    <ul id="userAccountsList"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Recognize Flower. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scriptLogin.js"></script>
+</body>
+</html>

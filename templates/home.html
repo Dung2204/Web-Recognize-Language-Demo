@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome to the Home Page!</h1>
+        <nav>
+            <ul class="menu">
+                <li><a class="nav-button" href="{{ url_for('login') }}">Login</a></li>
+                <li><a class="nav-button" href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a class="nav-button" href="{{ url_for('language_detection') }}">Language Detection</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Welcome to Language Detection</h2>
+                <p>Identify different languages with our advanced recognition system.</p>
+                <a href="{{ url_for('language_detection') }}">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="feature">
+                    <img src="{{ url_for('static', filename='img/111-768x576.jpg') }}" alt="Feature 1">
+                    <h3>Accurate Recognition</h3>
+                    <p>Our system uses AI to provide accurate language recognition.</p>
+                </div>
+                <div class="feature">
+                    <img src="{{ url_for('static', filename='img/pasted image 0.png') }}" alt="Feature 2">
+                    <h3>Easy to Use</h3>
+                    <p>Just upload a language and get instant results with our user-friendly interface.</p>
+                </div>
+                <div class="feature">
+                    <img src="{{ url_for('static', filename='img/welcome-phrase-in-different-languages-of-the-world-vector-10668817.jpg') }}" alt="Feature 3">
+                    <h3>Responsive Design</h3>
+                    <p>Enjoy a seamless experience on any device, whether it's a smartphone or desktop.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>User Testimonials</h2>
+                <div class="testimonial">
+                    <p>"This language detection tool has changed the way I work. Highly recommend!" - User A</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Fast and accurate results. It's a game-changer!" - User B</p>
+                </div>
+                <div class="testimonial">
+                    <p>"User-friendly and efficient. Love it!" - User C</p>
+                </div>
+            </div>
+        </section>
+      <section id="language-album">
+    <h3>Language Album</h3>
+    <div class="album">
+        <div class="language-card">
+            <img src="path-to-english-flag.jpg" alt="English">
+            <h4>English</h4>
+            <p>Spoken in over 50 countries.</p>
+        </div>
+        <div class="language-card">
+            <img src="path-to-spanish-flag.jpg" alt="Spanish">
+            <h4>Spanish</h4>
+            <p>Native language of over 20 countries.</p>
+        </div>
+        <div class="language-card">
+            <img src="path-to-french-flag.jpg" alt="French">
+            <h4>French</h4>
+            <p>Widely spoken in Europe and Africa.</p>
+        </div>
+        <div class="language-card">
+            <img src="path-to-vietnamese-flag.jpg" alt="Vietnamese">
+            <h4>Vietnamese</h4>
+            <p>The official language of Vietnam.</p>
+        </div>
+        <!-- Thêm các thẻ ngôn ngữ khác ở đây -->
+    </div>
+</section>
+
+    </main>
+   <button class="back-to-top">↑</button> <!-- Nút trở về đầu trang -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Recognition Language Detection. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

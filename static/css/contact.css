@@ -1,0 +1,157 @@
+/* Reset và kiểu cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa; /* Màu nền sáng hơn */
+    color: #333;
+    animation: fadeIn 0.5s ease-out;
+    line-height: 1.6;
+    padding-bottom: 50px; /* Để tạo khoảng trống cho footer */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Đổ bóng sâu hơn */
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #1976d2;
+    margin-bottom: 25px;
+}
+
+nav {
+    background-color: #1976d2;
+    padding: 23px;
+    border-radius: 27px;
+    margin-bottom: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #0053ba;
+    transform: scale(1.05);
+}
+
+.nav-button {
+    padding: 12px 25px;
+    border-radius: 25px;
+}
+
+.nav-button:hover {
+    background-color: #0053ba;
+    transform: translateY(-3px);
+}
+
+/* Form liên hệ */
+#contact-form {
+    margin-top: 40px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0; /* Bo góc và viền rõ ràng */
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #0053ba;
+    transform: translateY(-3px);
+}
+
+#formFeedback {
+    font-size: 1.2rem;
+    color: green;
+    margin-top: 20px;
+}
+
+/* Nút trở về đầu trang */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 18px;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0053ba;
+    transform: scale(1.15);
+}
+
+footer {
+    background-color: #1976d2;
+    color: black;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+}

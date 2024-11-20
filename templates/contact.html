@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <script src="{{ url_for('static', filename='js/contact.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a class="nav-button" href="{{ url_for('home') }}">Home</a></li>
+                    <li><a class="nav-button" href="{{ url_for('language_detection') }}">Recognize</a></li>
+                    <li><a class="nav-button" href="{{ url_for('login') }}">login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="contact-form">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" method="POST">
+                <input type="text" id="name" name="name" placeholder="Họ và tên" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <textarea id="message" name="message" placeholder="Tin nhắn" required></textarea><br>
+                <input type="submit" value="Gửi">
+            </form>
+            <div id="formFeedback" style="display:none;"></div>
+        </section>
+    </div>
+
+    <button class="back-to-top">↑</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Contact Page. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recognize.css') }}">
+    <script src="{{ url_for('static', filename='js/recognize.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Recognize Flower</h1>
+            <nav aria-label="Main Navigation">
+                <ul class="menu">
+                    <li><a class="nav-button" href="{{ url_for('home') }}">Home</a></li>
+                    <li><a class="nav-button" href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a class="nav-button" href="{{ url_for('login') }}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container" id="recognize">
+            <form method="POST" onsubmit="return validateInput()">
+                <textarea name="user_input" rows="4" cols="50" placeholder="Nhập văn bản ở đây..."></textarea><br>
+                <input type="submit" value="Nhận diện ngôn ngữ">
+            </form>
+            {% if language %}
+            <h2>Ngôn ngữ đã nhận diện: {{ language }}</h2>
+            <!-- <div id="history">
+                <h3>Lịch sử nhận diện:</h3>
+                <ul id="history-list"></ul>
+            </div> -->
+            {% endif %}
+            <a href="{{ url_for('home') }}">Quay lại trang chủ</a>
+        </div>
+
+        <!-- Phần Album Ngôn Ngữ -->
+        <div id="language-album">
+            <h2>Các Ngôn Ngữ Phổ Biến</h2>
+            <div class="album">
+                <div class="language-card">
+                    <img src="{{ url_for('static', filename='images/vietnamese.jpg') }}" alt="Vietnamese">
+                    <h4>Tiếng Việt</h4>
+                    <p>Ngôn ngữ chính của Việt Nam, sử dụng bảng chữ cái Latinh.</p>
+                </div>
+                <div class="language-card">
+                    <img src="{{ url_for('static', filename='images/english.jpg') }}" alt="English">
+                    <h4>English</h4>
+                    <p>Phổ biến toàn cầu và là ngôn ngữ chính của nhiều quốc gia.</p>
+                </div>
+                <div class="language-card">
+                    <img src="{{ url_for('static', filename='images/french.jpg') }}" alt="French">
+                    <h4>Français</h4>
+                    <p>Ngôn ngữ lãng mạn được nói ở nhiều quốc gia trên thế giới.</p>
+                </div>
+                <!-- Bạn có thể thêm nhiều thẻ ngôn ngữ khác theo cách tương tự -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Recognize Flower. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

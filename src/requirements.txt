@@ -1,1 +1,6 @@
+Flask
+CountVectorizer
+MultinomialNB
+pandas
+numpy
 
